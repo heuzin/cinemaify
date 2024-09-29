@@ -1,12 +1,12 @@
 import { compare } from "bcrypt";
-import NextAuth from "next-auth";
-import Credentials from "next-auth/providers/credentials";
+import NextAuth, { NextAuthOptions } from "next-auth";
+import CredentialsProvider from "next-auth/providers/credentials";
 
 import { db } from "@/lib/db";
 
-export const authOptions = {
+export const authOptions: NextAuthOptions = {
   providers: [
-    Credentials({
+    CredentialsProvider({
       id: "credentials",
       name: "credentials",
       credentials: {
@@ -47,6 +47,9 @@ export const authOptions = {
       },
     }),
   ],
+  session: {
+    strategy: "jwt",
+  },
   pages: {
     signIn: "/auth",
   },
@@ -56,4 +59,5 @@ export const authOptions = {
   },
   secret: process.env.NEXTAUTH_SECRET,
 };
-export default NextAuth(authOptions);
+const handler = NextAuth(authOptions);
+export { handler as GET, handler as POST };

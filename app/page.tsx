@@ -1,7 +1,7 @@
 import { redirect } from "next/navigation";
 import { authOptions } from "./api/auth/[...nextauth]/route";
 import { getServerSession } from "next-auth";
-import SignOut from "./SignOut";
+import Navbar from "@/components/navigation/Navbar";
 
 export default async function Home() {
   const session = await getServerSession(authOptions);
@@ -9,5 +9,5 @@ export default async function Home() {
   if (!session) {
     redirect("/auth");
   }
-  return <SignOut />;
+  return <Navbar />;
 }

@@ -10,7 +10,7 @@
   {
     "title": "Sintel",
     "description": "A lonely young woman, Sintel, helps and befriends a dragon, whom she calls Scales. But when he is kidnapped by an adult dragon, Sintel decides to embark on a dangerous quest to find her lost friend Scales.",
-    "videoUrl": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/Sintel.mp4",
+    "videoUrl": "http://mango.blender.org/gtv-videos-bucket/sample/Sintel.mp4",
     "thumbnailUrl": "http://uhdtv.io/wp-content/uploads/2020/10/Sintel-3.jpg",
     "genre": "Adventure",
     "duration": "15 minutes"
@@ -30,5 +30,13 @@
     "thumbnailUrl": "https://download.blender.org/ED/cover.jpg",
     "genre": "Sci-Fi",
     "duration": "15 minutes"
+  },
+  {
+    "title": "The Avengers",
+    "description": "When an unexpected enemy emerges and threatens global safety and security, Nick Fury, director of the international peacekeeping agency known as S.H.I.E.L.D., finds himself in need of a team to pull the world back from the brink of disaster. Spanning the globe, a daring recruitment effort begins!",
+    "videoUrl": "https://clip.cafe/videos/until-can-close-portal.mp4",
+    "thumbnailUrl": "https://clip.cafe/posters/500/the-avengers-2012.jpg",
+    "genre": "Sci-Fi",
+    "duration": "30 minutes"
   }
 ]

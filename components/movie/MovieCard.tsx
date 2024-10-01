@@ -5,11 +5,11 @@ import { useRouter } from "next/navigation";
 import { BsChevronDown, BsFillPlayFill } from "react-icons/bs";
 import FavoriteButton from "./FavoriteButton";
 
-type Props = {
+interface MovieCardProps {
   data: Movie;
-};
+}
 
-export const MovieCard = ({ data }: Props) => {
+export const MovieCard: React.FC<MovieCardProps> = ({ data }) => {
   const router = useRouter();
 
   //   const { openModal } = useInfo();

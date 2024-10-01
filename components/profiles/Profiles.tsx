@@ -14,6 +14,10 @@ const Profiles = () => {
     router.push("/");
   }, [router]);
 
+  if (!currentUser?.name) {
+    return router.push("/auth");
+  }
+
   return (
     <div className="flex items-center h-full justify-center">
       <div className="flex flex-col">

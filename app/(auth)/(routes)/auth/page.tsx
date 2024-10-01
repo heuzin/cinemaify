@@ -113,7 +113,7 @@ const AuthPage = () => {
               </div>
               <p className="text-neutral-500 mt-12">
                 {variant == "login"
-                  ? "New to Codyflix?"
+                  ? "New to Cinemaify?"
                   : "Already have an account?"}
                 <span
                   onClick={toggleVariant}

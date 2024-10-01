@@ -15,7 +15,7 @@ const Profiles = () => {
   }, [router]);
 
   if (!currentUser?.name) {
-    return router.push("/auth");
+    return null;
   }
 
   return (

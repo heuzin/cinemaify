@@ -5,6 +5,7 @@ import { authOptions } from "./api/auth/[...nextauth]/route";
 import Navbar from "@/components/navigation/Navbar";
 import MovieList from "@/components/movie/MovieList";
 import Billboard from "@/components/billboard/Billboard";
+import Modals from "@/components/modals/Modals";
 
 export default async function Home() {
   const session = await getServerSession(authOptions);
@@ -14,6 +15,7 @@ export default async function Home() {
   }
   return (
     <>
+      <Modals />
       <Navbar />
       <Billboard />
       <MovieList />

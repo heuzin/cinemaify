@@ -1,18 +1,19 @@
 "use client";
 
-import useBillboard from "@/hooks/useBillboard";
+import { useCallback } from "react";
 import { AiOutlineInfoCircle } from "react-icons/ai";
+
 import PlayButton from "./PlayButton";
-// import { useCallback } from "react";
-// import useInfo from "@/hooks/useInfo";
+import useInfoModal from "@/hooks/useInfoModal";
+import useBillboard from "@/hooks/useBillboard";
 
 const Billboard = () => {
   const { data } = useBillboard();
-  //   const { openModal } = useInfo();
+  const { openModal } = useInfoModal();
 
-  //   const handleModalOpen = useCallback(() => {
-  //     openModal(data?.id);
-  //   }, [openModal, data?.id]);
+  const handleModalOpen = useCallback(() => {
+    openModal(data!.id);
+  }, [openModal, data?.id]);
 
   return (
     <div className="relative h-[56.25vw]">
@@ -35,7 +36,7 @@ const Billboard = () => {
         <div className="flex flex-row items-center mt-3 md:mt-4 gap-3">
           <PlayButton id={data?.id} />
           <button
-            // onClick={handleModalOpen}
+            onClick={handleModalOpen}
             className="bg-white text-white bg-opacity-30 rounded-md py-1 md:py-2 px-2 md:px-4 text-xs w-auto lg:text-lg font-semibold flex flex-row items-center hover:bg-opacity-20 transition"
           >
             <AiOutlineInfoCircle className="mr-2" />

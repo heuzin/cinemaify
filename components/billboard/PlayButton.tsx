@@ -4,7 +4,7 @@ import { useRouter } from "next/navigation";
 import { BsFillPlayFill } from "react-icons/bs";
 
 type Props = {
-  id: string;
+  id?: string;
 };
 
 const PlayButton = ({ id }: Props) => {

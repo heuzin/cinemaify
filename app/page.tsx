@@ -1,7 +1,9 @@
 import { redirect } from "next/navigation";
-import { authOptions } from "./api/auth/[...nextauth]/route";
 import { getServerSession } from "next-auth";
+import { authOptions } from "./api/auth/[...nextauth]/route";
+
 import Navbar from "@/components/navigation/Navbar";
+import MovieList from "@/components/movie/MovieList";
 import Billboard from "@/components/billboard/Billboard";
 
 export default async function Home() {
@@ -14,6 +16,7 @@ export default async function Home() {
     <>
       <Navbar />
       <Billboard />
+      <MovieList />
     </>
   );
 }

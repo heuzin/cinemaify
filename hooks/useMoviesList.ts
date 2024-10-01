@@ -2,9 +2,9 @@ import fetcher from "@/lib/fetcher";
 import { Movie } from "@prisma/client";
 import useSWR from "swr";
 
-const useBillboard = () => {
-  const { data, error, isLoading } = useSWR<Movie, Error>(
-    "/api/random",
+const useMoviesList = () => {
+  const { data, error, isLoading } = useSWR<Movie[], Error>(
+    "/api/movies",
     fetcher,
     {
       revalidateIfStale: false,
@@ -16,4 +16,4 @@ const useBillboard = () => {
   return { data, error, isLoading };
 };
 
-export default useBillboard;
+export default useMoviesList;
